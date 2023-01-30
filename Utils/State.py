@@ -102,5 +102,5 @@ class UiState(ChoiceObject):
         elif use == 2:
             self._db.add_house()
         elif use == 3:
-            self._db.save_json()
+            self._db.save_txt()
         return use
