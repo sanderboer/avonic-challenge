@@ -598,5 +598,80 @@
                 ]
             }
         ]
+    },
+    {
+        "status": "For rent",
+        "address": "Goudsesingel 464",
+        "postal_code": "3011KP",
+        "num_rooms": 4,
+        "price": 1200,
+        "heating": "Block heating",
+        "options": [
+            {
+                "name": "Facade insulation",
+                "installed": true,
+                "energy_index": 6,
+                "alt_names": [
+                    "facade"
+                ]
+            },
+            {
+                "name": "Floor insulation",
+                "installed": true,
+                "energy_index": 6,
+                "alt_names": [
+                    "floor"
+                ]
+            },
+            {
+                "name": "Roof insulation",
+                "installed": true,
+                "energy_index": 6,
+                "alt_names": [
+                    "roof"
+                ]
+            },
+            {
+                "name": "Insulated glass",
+                "installed": true,
+                "energy_index": 6,
+                "alt_names": [
+                    "glass"
+                ]
+            },
+            {
+                "name": "Sun boiler",
+                "installed": false,
+                "energy_index": 6,
+                "alt_names": [
+                    "sunboiler"
+                ]
+            },
+            {
+                "name": "Ventilation heat pump",
+                "installed": false,
+                "energy_index": 6,
+                "alt_names": [
+                    "ventilationheatpump"
+                ]
+            },
+            {
+                "name": "Solar panels",
+                "installed": true,
+                "energy_index": 6,
+                "alt_names": [
+                    "pv",
+                    "solar"
+                ]
+            },
+            {
+                "name": "Shower heat recovery",
+                "installed": false,
+                "energy_index": 6,
+                "alt_names": [
+                    "shower"
+                ]
+            }
+        ]
     }
 ]

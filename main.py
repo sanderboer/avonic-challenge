@@ -1,6 +1,7 @@
 import os
 import sys
 from House.Main import HouseDatabase
+from Utils.State import UiState
 
 
 def main():
@@ -8,8 +9,10 @@ def main():
         os.system("cls")
     else:
         os.system("clear")
-    houses = HouseDatabase("testdata.txt")
-    houses.print_list()
+    database = HouseDatabase.from_txt_file()
+    ui_state = UiState(database)
+    while ui_state.choose_action() != 3:
+        pass
 
 
 if __name__ == "__main__":
