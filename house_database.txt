@@ -1,0 +1,64 @@
+9
+For sale:
+Emmalaan 23
+3051JC Rotterdam
+7 rooms
+saleprice 300000
+Boiler heating
+0,0,0,0,0,0,0,0
+Sold:
+Emmalaan 25
+3051JC Rotterdam
+5 rooms
+saleprice 280000
+Central heating
+0,0,0,0,0,0,0,0
+For rent:
+Javastraat 88
+4078KB Eindhoven
+3 rooms
+rentprice 500
+Boiler heating
+0,0,0,0,0,0,0,0
+Rented:
+Javastraat 90
+4078KB Eindhoven
+2 rooms
+rentprice 400
+Central heating
+0,0,0,0,0,0,0,0
+For sale:
+Emmalaan 23
+3051JC Rotterdam
+7 rooms
+saleprice 300000
+Boiler heating
+0,0,0,0,0,0,0,0
+Sold:
+Emmalaan 25
+3051JC Rotterdam
+5 rooms
+saleprice 280000
+Central heating
+0,0,0,0,0,0,0,0
+For rent:
+Javastraat 88
+4078KB Eindhoven
+3 rooms
+rentprice 500
+Boiler heating
+0,0,0,0,0,0,0,0
+Rented:
+Javastraat 90
+4078KB Eindhoven
+2 rooms
+rentprice 400
+Central heating
+0,0,0,0,0,0,0,0
+For rent:
+Goudsesingel 464
+3011KP
+4 rooms
+rentprice 1200
+Block heating
+1,1,1,1,0,0,1,0

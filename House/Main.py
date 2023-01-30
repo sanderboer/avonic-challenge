@@ -237,21 +237,6 @@ class House:
             "options": self._options.to_dict(),
         }
 
-    @classmethod
-    def from_dict(cls, dict):
-        new_object = cls()
-        new_object._status = Status.from_name(dict["status"])
-        new_object._address = dict["address"]
-        new_object._postal_code = dict["postal_code"]
-        new_object._num_rooms = dict["num_rooms"]
-        new_object._price = dict["price"]
-        new_object._heating = HeatingMethod.from_name(dict["heating"])
-        options = EnergyOptions()
-        options._choices = dict["options"]
-        new_object._options = options
-
-        return new_object
-
 
 class HouseDatabase:
     _houses = []
@@ -286,16 +271,6 @@ class HouseDatabase:
                             options,
                         )
                     )
-        return new_object
-
-    @classmethod
-    def from_json(cls):
-        houses_dict = []
-        with open(cls._db_filename + ".json", "r") as content:
-            houses_dict = json.load(content)
-        new_object = cls()
-        for val in houses_dict:
-            cls._houses.append(House.from_dict(val))
         return new_object
 
     def to_dict(self):
