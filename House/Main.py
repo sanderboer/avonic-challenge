@@ -161,20 +161,6 @@ class House:
     def __init__(self):
         pass
 
-    @classmethod
-    def from_txt_data(
-        cls, status, address, postal_code, num_rooms, price, heating, options
-    ):
-        new_object = cls()
-        new_object._status = Status.from_name(status)
-        new_object._address = address
-        new_object._postal_code = postal_code
-        new_object._num_rooms = num_rooms
-        new_object._price = price
-        new_object._heating = HeatingMethod.from_name(heating)
-        new_object._options = EnergyOptions.from_csv_str(options)
-        return new_object
-
     def __str__(self):
         return "{}:\n{}\n{}\n{} rooms\n{}\n{}\n{}\n".format(
             self._status.name(),
@@ -262,33 +248,6 @@ class HouseDatabase:
         pass
 
     @classmethod
-    def from_txt_file(cls):
-        new_object = cls()
-        if os.path.exists(cls._db_filename + ".txt"):
-            with open(cls._db_filename + ".txt", "r") as file:
-                num_houses = int(file.readline())
-                for i in range(0, num_houses):
-                    status = file.readline().strip().replace(":", "")
-                    address = file.readline().strip()
-                    postal_code = file.readline().strip()
-                    num_rooms = int(file.readline().strip().split(" ")[0])
-                    price = int(file.readline().strip().split(" ")[1])
-                    heating = file.readline().strip()
-                    options = file.readline().strip()
-                    new_object._houses.append(
-                        House.from_txt_data(
-                            status,
-                            address,
-                            postal_code,
-                            num_rooms,
-                            price,
-                            heating,
-                            options,
-                        )
-                    )
-        return new_object
-
-    @classmethod
     def from_json(cls):
         houses_dict = []
         with open(cls._db_filename + ".json", "r") as content:
@@ -304,12 +263,6 @@ class HouseDatabase:
     def save_json(self):
         with open(self._db_filename + ".json", "w") as file:
             file.write(json.dumps(self.to_dict(), indent=4))
-
-    def save_txt(self):
-        with open(self._db_filename + ".txt", "w") as file:
-            file.write(str(len(self._houses)) + "\n")
-            for house in self._houses:
-                file.write(str(house))
 
     def add_house(self):
         print("------------------------------------------------")

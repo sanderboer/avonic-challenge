@@ -9,7 +9,7 @@ def main():
         os.system("cls")
     else:
         os.system("clear")
-    database = HouseDatabase.from_txt_file()
+    database = HouseDatabase.from_json()
     ui_state = UiState(database)
     while ui_state.choose_action() != 3:
         pass
